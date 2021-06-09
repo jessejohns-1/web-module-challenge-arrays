@@ -45,8 +45,8 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
+function copy(flavors){
+    var copy = originalFlavors.slice();
 }    
 
 
@@ -160,10 +160,19 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    //make and empyty array so that we push our strings to it
+    const filteredFlavors = [];
+    //loop through the entire array//
+    for(let i = 0; i < array.length; i++) {
+        //if the index contains the string
+        if(array[i].includes(string)){
+            //push that index to the new array
+            filteredFlavors.push(array[i]);
+        }
+    }
+    return filteredFlavors;
 }
-
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
