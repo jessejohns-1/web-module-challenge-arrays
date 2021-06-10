@@ -133,14 +133,14 @@ Use the removeFlavorByName function below to do the following:
     2. Receive a flavor as a string
     3. Remove the received flavor from the received array
     4. Return the resulting array that now contains one less flavor
-
+    
     For example: running removeFlavorByName(originalFlavors, "Rocky Road") would return an array with the a length of 30 because Rocky Road would have been removed. 
 
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array,string){
+    
 }
 
 
@@ -174,7 +174,7 @@ function filterByWord(array, string){
         if(array[i].includes(string)){
             //push that index to the new array
             filteredFlavors.push(array[i]);
-        }
+        }  
     }
     return filteredFlavors;
 }
