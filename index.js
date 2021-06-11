@@ -45,12 +45,10 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(flavorscopy){
-    const cloneflavor = {...originalFlavors}
-    return flavorscopy;  
-
+function copy(array){
+   return [...array]
 } 
- 
+ console.log('task1:',copy(originalFlavors))
 
 
 
@@ -67,13 +65,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(array){
-    if (array.length == 31){
+    if (array.length === 31){
         return true;
     }else {
         return false;
     }
  }  
-
+console.log("task2:",is31Flavors(originalFlavors));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
 
@@ -91,7 +89,7 @@ function addFlavor(array, string){
    array.unshift(string);
    return array;
 }
-
+console.log("task3", addFlavor(originalFlavors,'rainbow sherbert'))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
 
@@ -107,7 +105,7 @@ function removeLastFlavor(array){
     return array;
  }
 
-
+console.log("task4:", removeLastFlavor(originalFlavors))
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
 
@@ -119,10 +117,10 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(array, i){
-    return array[i];
+function getFlavorByIndex(array, number){
+    return array[number];
 }
-
+console.log("task:5",getFlavorByIndex(originalFlavors,2))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, 
@@ -140,9 +138,14 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array,string){
-    
+    for(let i=0; i < array.length; i++){
+        if(array[i] === string){
+            array.splice(i,1)
+        }
+    }
+    return array
 }
-
+console.log("task 6", removeFlavorByName(originalFlavors, "rocky road"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
